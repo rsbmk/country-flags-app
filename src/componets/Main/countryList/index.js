@@ -1,15 +1,37 @@
-import React, { useContext } from "react";
+import React, { useEffect } from "react";
 import Countrie from "../Countrie/index";
-import StaticContext from "../../../Context/StaticContext";
+import { useDispatch, useSelector } from "react-redux";
 import "./style.css";
 
 export default function CountrytList() {
-  /* consumimos los datos de la api desde el Context */
-  const { country, setCountry } = useContext(StaticContext);
+  const dispatch = useDispatch();
+
+  /* const countryListByName = useSelector((state) => state.countryListByName); */
+
+  const countryList = useSelector((state) => {
+    if (state.filterByRegion !== "") {
+      return state.countryFilterByRegion;
+    }
+    if (state.countryListByName.length > 0) {
+      return state.countryListByName;
+    }
+    return state.countryList;
+  });
+
+  useEffect(() => {
+    fetch("https://restcountries.eu/rest/v2/all")
+      .then((response) => response.json())
+      .then((data) => {
+        dispatch({
+          type: "SET_COUNTRY_LIST",
+          payload: data,
+        });
+      });
+  }, []);
 
   return (
     <div className="container">
-      {country.map(({ flag, name, population, region, capital }) => {
+      {countryList.map(({ flag, name, population, region, capital }) => {
         return (
           <Countrie
             key={name}

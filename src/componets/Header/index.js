@@ -1,5 +1,5 @@
 import React from "react";
-import DarkMode from "../DarkMode";
+import DarkMode from "./DarkMode";
 import "./styles.css";
 
 export default function Header() {
