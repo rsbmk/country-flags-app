@@ -1,0 +1,10 @@
+.container {
+  /* height: 100vh; */
+  display: grid;
+  gap: 2.3em;
+  justify-content: center;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  padding: 4em 2em;
+  background-color: var(--VeryLightGray);
+  max-width: 90vw;
+}

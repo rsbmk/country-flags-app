@@ -1,7 +1,7 @@
 import React from "react";
 import "../../App.css";
 import CountrytList from "../countryList";
-import Search from "../Search";
+import Search from "../Main/Search/index";
 import Filter from "./Filter";
 
 export default function Main() {

@@ -1,0 +1,22 @@
+.cardCountry {
+  width: 230px;
+  border-radius: 5px;
+  overflow: hidden;
+  min-height: 300px;
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.03);
+}
+.flag {
+  width: 100%;
+}
+.infoCountry {
+  padding: 0 0 40px 24px;
+}
+.infoCountry p {
+  margin-bottom: 3px;
+}
+
+.countryName {
+  font-size: 1.3em;
+  margin: 20px 0;
+  font-weight: bold;
+}
