@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapMain {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: var(--VeryLightGray);
 }
-
-.App-link {
-  color: #61dafb;
+body {
 }
+/* ocultar scroll -y */
+::-webkit-scrollbar {
+  display: none;
+}
+:root {
+  /*  ## Colors
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+### Neutral */
+  /* (DarkModeElements) */
+  --DarkBlue: hsl(209, 23%, 22%);
+
+  /* (DarkModeBackground) */
+  --VeryDarkBlue: hsl(207, 26%, 17%);
+
+  /* (LightModeText) */
+  --VeryDarkBlue: hsl(200, 15%, 8%);
+
+  /* (LightModeInput) */
+  --DarkGray: hsl(0, 0%, 52%);
+
+  /* (LightModeBackground) */
+  --VeryLightGray: hsl(0, 0%, 98%);
+
+  /* (DarkModeText&LightModeElements) */
+  --White: hsl(0, 0%, 100%);
 }

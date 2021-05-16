@@ -1,0 +1,7 @@
+.containerDarkMode {
+  font-weight: 600;
+}
+.fa-moon {
+  transform: rotate(-30deg);
+  margin-right: 10px;
+}

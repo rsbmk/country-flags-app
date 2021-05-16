@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./componets/Header";
+import Main from "./componets/Main";
+import StaticContext from "./Context/StaticContext";
+import { useGetDataApi } from "./hooks/useGetDataApi.js";
 
 function App() {
+  /* llamamos la api */
+  const { country } = useGetDataApi();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    /* guardamos los datos de la API en el context */
+    <StaticContext.Provider
+      value={{
+        countryList: country,
+      }}
+    >
+      <div className="App">
+        <header className="App-header">
+          <Header />
+          <Main />
+        </header>
+      </div>
+    </StaticContext.Provider>
   );
 }
 

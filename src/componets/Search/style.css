@@ -1,0 +1,22 @@
+.containerSearch {
+  margin: 1.5em 0;
+  background-color: var(--White);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+}
+.inputSearch {
+  margin-left: 20px;
+  height: 40px;
+  width: 230px;
+  border: none;
+}
+.inputSearch:focus {
+  outline: none;
+}
+.fa-search {
+  margin-left: 20px;
+  color: var(--DarkGray);
+}
