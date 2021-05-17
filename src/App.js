@@ -1,11 +1,14 @@
 import "./App.css";
 import Header from "./componets/Header";
 import Main from "./componets/Main";
+import DetailCountry from "./componets/DetailCountry";
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import reducer from "./settings/reducer";
 import { initialState } from "./settings/initialState";
+
+import { Route } from "wouter";
 
 function App() {
   const store = createStore(reducer, initialState);
@@ -14,7 +17,9 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <Header />
-        <Main />
+        <Route path="/:name" component={DetailCountry} />
+        <Route path="/" component={Main} />
+        {/* <Main /> */}
       </div>
     </Provider>
   );

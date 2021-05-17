@@ -1,10 +1,12 @@
 import React from "react";
+import { useLocation } from "wouter";
 import "./styles.css";
 
 export default function Countrie({ flag, name, population, region, capital }) {
+  const [location, setLocation] = useLocation();
   return (
     <>
-      <div className="cardCountry">
+      <div onClick={() => setLocation(`/${name}`)} className="cardCountry">
         <img loading="lazy" alt="flag" className="flag" src={flag} />
         <div className="infoCountry">
           <p className="countryName">{name}</p>
