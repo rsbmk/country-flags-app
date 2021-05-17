@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Filter() {
@@ -15,7 +16,11 @@ export default function Filter() {
   };
 
   return (
-    <select onChange={handleChangeRegion} value={filterByRegion}>
+    <select
+      className="filter"
+      onChange={handleChangeRegion}
+      value={filterByRegion}
+    >
       <option value="">Filter by region</option>
       <option value="Americas">Americas</option>
       <option value="Asia">Asia</option>

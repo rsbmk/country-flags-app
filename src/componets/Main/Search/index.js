@@ -14,15 +14,13 @@ export default function Search() {
   };
 
   return (
-    <div className="containerSearch">
-      <form>
-        <i className="fas fa-search" />
-        <input
-          onChange={handleChange}
-          placeholder="Search for a country..."
-          className="inputSearch"
-        />
-      </form>
-    </div>
+    <label className="containerSearch">
+      <i className="fas fa-search" />
+      <input
+        onChange={handleChange}
+        placeholder="Search for a country..."
+        className="inputSearch"
+      />
+    </label>
   );
 }

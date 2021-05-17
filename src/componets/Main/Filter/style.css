@@ -1,0 +1,10 @@
+.filter {
+  border: none;
+  padding: 1em 1.5em;
+  border-radius: 5px;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
+  max-width: 30vw;
+}
+.filter:focus {
+  outline: none;
+}

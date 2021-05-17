@@ -1,15 +1,16 @@
-import React, { useEffect } from "react";
-import Countrie from "../Countrie/index";
-import { useDispatch, useSelector } from "react-redux";
 import "./style.css";
+import React from "react";
+import Countrie from "../Countrie/index";
+import { useSelector } from "react-redux";
+import { URL_API } from "../../../settings/services";
+import { useFetch } from "../../../settings/useFetch";
 
 export default function CountrytList() {
-  const dispatch = useDispatch();
-
-  /* const countryListByName = useSelector((state) => state.countryListByName); */
+  /* call the Data with useFetch */
+  useFetch(URL_API);
 
   const countryList = useSelector((state) => {
-    if (state.filterByRegion !== "") {
+    if (state.filterByRegion !== "" && state.countryListByName.length === 0) {
       return state.countryFilterByRegion;
     }
     if (state.countryListByName.length > 0) {
@@ -17,17 +18,6 @@ export default function CountrytList() {
     }
     return state.countryList;
   });
-
-  useEffect(() => {
-    fetch("https://restcountries.eu/rest/v2/all")
-      .then((response) => response.json())
-      .then((data) => {
-        dispatch({
-          type: "SET_COUNTRY_LIST",
-          payload: data,
-        });
-      });
-  }, []);
 
   return (
     <div className="container">

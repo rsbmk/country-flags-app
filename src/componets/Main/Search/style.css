@@ -5,13 +5,18 @@
   display: flex;
   align-items: center;
   border-radius: 4px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
 }
 .inputSearch {
   margin-left: 20px;
-  height: 40px;
+  height: 48px;
+  line-height: 48px;
   width: 230px;
+  font-size: 0.7em;
   border: none;
+}
+.inputSearch::-webkit-input-placeholder {
+  color: var(--DarkGray);
 }
 .inputSearch:focus {
   outline: none;

@@ -7,11 +7,9 @@ import Filter from "./Filter";
 export default function Main() {
   return (
     <main className="wrapMain">
-      <div>
-        <Search />
-        <Filter />
-        <CountrytList />
-      </div>
+      <Search />
+      <Filter />
+      <CountrytList />
     </main>
   );
 }
