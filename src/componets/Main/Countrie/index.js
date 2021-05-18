@@ -6,7 +6,10 @@ export default function Countrie({ flag, name, population, region, capital }) {
   const [location, setLocation] = useLocation();
   return (
     <>
-      <div onClick={() => setLocation(`/${name}`)} className="cardCountry">
+      <div
+        onClick={() => setLocation(`/country/${name}`)}
+        className="cardCountry"
+      >
         <img loading="lazy" alt="flag" className="flag" src={flag} />
         <div className="infoCountry">
           <p className="countryName">{name}</p>

@@ -4,7 +4,6 @@ import Countrie from "../Countrie/index";
 import { useSelector } from "react-redux";
 import { URL_API } from "../../../settings/services";
 import { useFetch } from "../../../settings/useFetch";
-import { Link } from "wouter";
 
 export default function CountrytList() {
   /* call the Data with useFetch */

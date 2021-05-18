@@ -17,7 +17,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <Header />
-        <Route path="/:name" component={DetailCountry} />
+        <Route path="/country/:name" component={DetailCountry} />
         <Route path="/" component={Main} />
         {/* <Main /> */}
       </div>

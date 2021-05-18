@@ -33,6 +33,14 @@ export default function reducer(state, action) {
 
       return { ...state, countryListByName };
     }
+    case "GET_A_COUNTRY_BY_NAME": {
+      const countryName = action.payload.toLowerCase();
+      const dataCountry = state.countryList.filter(
+        (country) => country.name.toLowerCase() === countryName
+      );
+
+      return { ...state, getCountryByName: dataCountry };
+    }
     default: {
       return state;
     }
