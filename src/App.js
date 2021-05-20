@@ -5,7 +5,7 @@ import DetailCountry from "./componets/DetailCountry";
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import reducer from "./settings/reducer";
+import { reducer } from "./settings/reducer";
 import { initialState } from "./settings/initialState";
 
 import { Route } from "wouter";

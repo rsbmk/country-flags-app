@@ -1,4 +1,4 @@
-export default function reducer(state, action) {
+export function reducer(state, action) {
   switch (action.type) {
     case "SET_COUNTRY_LIST": {
       return { ...state, countryList: action.payload };
@@ -34,12 +34,14 @@ export default function reducer(state, action) {
       return { ...state, countryListByName };
     }
     case "GET_A_COUNTRY_BY_NAME": {
-      console.log(state.countryList);
+      /*  console.log(state.countryList); */
       const countryName = action.payload.toLowerCase();
       const dataCountry = state.countryList.filter(
         (country) => country.name.toLowerCase() === countryName
       );
-      /*  console.log(countryName);
+      /* console.log(countryName);
+      console.log(dataCountry); */
+      /* 
       if (!dataCountry.length) {
         dataCountry = state.countryList.filter(
           (country) => country.name.toLowerCase() === countryName

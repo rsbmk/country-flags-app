@@ -19,11 +19,16 @@
   background-color: red;
 }
 .inputSearch::-webkit-input-placeholder {
-  color: var(--colorItems);
+  color: var(--colorText);
   background-color: var(--colorBackgroundItem);
 }
 .inputSearch:focus {
   outline: none;
+  color: var(--colorText);
+  background-color: var(--colorBackgroundItem);
+}
+.inputSearch:active {
+  background-color: var(--colorBackgroundItem);
 }
 .fa-search {
   margin-left: 20px;

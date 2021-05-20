@@ -3,9 +3,9 @@
   margin: 0;
   padding: 0;
 }
-.App {
-  /*  border: 1px solid brown; */
-}
+/* .App {
+ border: 1px solid brown;
+} */
 
 /*MAIN STYLES*/
 .wrapMain {
@@ -15,9 +15,9 @@
   padding: 0 4em;
   /*  border: 1px solid green; */
 }
-.wrapSearchFilter {
-  /* background-color: cornflowerblue; */
-}
+/* .wrapSearchFilter {
+   background-color: cornflowerblue; 
+} */
 @media screen and (min-width: 625px) {
   .wrapSearchFilter {
     display: flex;
@@ -78,5 +78,22 @@ body.isDarkMode {
   --White: hsl(0, 0%, 100%);
 }
 /* Dark Mode */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --colorBackgroundItem: hsl(209, 23%, 22%);
+    --colorText: hsl(0, 0%, 100%);
+    --colorItems: hsl(0, 0%, 100%);
+    --bodyBackground: hsl(207, 26%, 17%);
+    --colorShadow: rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease all;
+  }
 }
+@media (prefers-color-scheme: light) {
+  :root {
+    --colorBackgroundItem: hsl(0, 0%, 100%);
+    --colorText: hsl(200, 15%, 8%);
+    --colorItems: hsl(0, 0%, 52%);
+    --bodyBackground: hsl(0, 0%, 98%);
+    --colorShadow: rgba(0, 0, 0, 0.05);
+  }
+} */

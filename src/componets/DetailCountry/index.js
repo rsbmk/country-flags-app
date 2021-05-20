@@ -1,22 +1,42 @@
 import React from "react";
 import "./styles.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+import { useLocation } from "wouter";
 
-export default function DetailCountry({ params }) {
-  const dispatch = useDispatch();
-  const countryName = params.name;
+export default function DetailCountry() {
+  /*  const dispatch = useDispatch();
+  const countryName = params.name; 
 
-  dispatch({
+   dispatch({
     type: "GET_A_COUNTRY_BY_NAME",
     payload: countryName,
-  });
-
+  }); */
   const [dataCountry] = useSelector((state) => state.getCountryByName);
+
+  const [location, setLocation] = useLocation();
+
+  const handleClick = () => {
+    setLocation("/");
+  };
+
+  const bordersCountry =
+    dataCountry.borders.length > 0 ? (
+      dataCountry.borders.map((border) => (
+        <span key={border} className="border">
+          {border}
+        </span>
+      ))
+    ) : (
+      <span className="border">No Borders</span>
+    );
   return (
     <div className="wrapDetailPage">
       <div className="containerCountryDetail">
         <div className="wrapButtonBack">
-          <button>back</button>
+          <div onClick={handleClick} className="bottonBack">
+            <i className="fas fa-arrow-left"></i>
+            Back
+          </div>
         </div>
         <div className="containertCountryInfo">
           <img
@@ -26,7 +46,7 @@ export default function DetailCountry({ params }) {
           />
           <div className="countryInfo">
             <h2 className="countryName">{dataCountry.name} </h2>
-            <div className="wrpaInfo">
+            <div className="wrapInfo">
               <div className="containerInfoCountry">
                 <p>
                   <span>Native Name: </span>
@@ -66,13 +86,7 @@ export default function DetailCountry({ params }) {
             </div>
             <div className="wrapBorderCountries">
               <h3 className="titleBorderCountries">Border Countries:</h3>
-              <div className="wrapCardBorders">
-                {dataCountry.borders.map((border) => (
-                  <span key={border} className="border">
-                    {border}
-                  </span>
-                ))}
-              </div>
+              <div className="wrapCardBorders">{bordersCountry}</div>
             </div>
           </div>
         </div>
