@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <div className="containerHeader">
-      <h1 onClick={() => setLocation("/")} className="title">
+      <h1 onClick={() => setLocation("/country-flags-app/")} className="title">
         Where in the world?
       </h1>
       <DarkMode />

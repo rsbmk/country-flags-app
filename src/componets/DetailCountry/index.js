@@ -16,7 +16,7 @@ export default function DetailCountry() {
   const [location, setLocation] = useLocation();
 
   const handleClick = () => {
-    setLocation("/");
+    setLocation("/country-flags-app/");
   };
 
   const bordersCountry =
