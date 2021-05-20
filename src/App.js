@@ -18,7 +18,7 @@ function App() {
       <div className="App">
         <Header />
         <Route path="/country/:name" component={DetailCountry} />
-        <Route path="/country-flags-app" component={Main} />
+        <Route path="/country-flags-app/" component={Main} />
       </div>
     </Provider>
   );
