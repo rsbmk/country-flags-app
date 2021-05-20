@@ -4,7 +4,14 @@
   overflow: hidden;
   min-height: 300px;
   cursor: pointer;
-  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.03);
+  border: 1px solid transparent;
+  transition: 0.3s border;
+  color: var(--colorText);
+  background-color: var(--colorBackgroundItem);
+  box-shadow: 0 0 7px 2px var(--colorShadow);
+}
+.cardCountry:hover {
+  border: 1px solid var(--colorItems);
 }
 .flag {
   width: 100%;

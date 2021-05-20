@@ -19,7 +19,6 @@ function App() {
         <Header />
         <Route path="/country/:name" component={DetailCountry} />
         <Route path="/" component={Main} />
-        {/* <Main /> */}
       </div>
     </Provider>
   );

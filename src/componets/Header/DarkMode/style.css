@@ -1,7 +1,14 @@
 .containerDarkMode {
+  cursor: pointer;
   font-weight: 600;
 }
 .fa-moon {
   transform: rotate(-30deg);
   margin-right: 10px;
+}
+
+@media screen and (min-width: 1300px) {
+  .containerDarkMode {
+    font-size: 1em;
+  }
 }

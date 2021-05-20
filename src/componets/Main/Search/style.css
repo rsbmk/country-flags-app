@@ -1,27 +1,31 @@
 .containerSearch {
   margin: 1.5em 0;
-  background-color: var(--White);
+  background-color: var(--colorBackgroundItem);
   height: 50px;
   display: flex;
   align-items: center;
   border-radius: 4px;
-  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 9px 0 var(--colorShadow);
 }
 .inputSearch {
   margin-left: 20px;
-  height: 48px;
-  line-height: 48px;
+  /* height: 48px; */
+  /* line-height: 48px; */
   width: 230px;
   font-size: 0.7em;
   border: none;
 }
+.inputSearch div {
+  background-color: red;
+}
 .inputSearch::-webkit-input-placeholder {
-  color: var(--DarkGray);
+  color: var(--colorItems);
+  background-color: var(--colorBackgroundItem);
 }
 .inputSearch:focus {
   outline: none;
 }
 .fa-search {
   margin-left: 20px;
-  color: var(--DarkGray);
+  color: var(--colorItems);
 }

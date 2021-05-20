@@ -3,14 +3,47 @@
   margin: 0;
   padding: 0;
 }
+.App {
+  /*  border: 1px solid brown; */
+}
+
+/*MAIN STYLES*/
 .wrapMain {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 0 4em;
+  /*  border: 1px solid green; */
 }
+.wrapSearchFilter {
+  /* background-color: cornflowerblue; */
+}
+@media screen and (min-width: 625px) {
+  .wrapSearchFilter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* background-color: red; */
+  }
+  @media screen and (min-width: 1300px) {
+    .wrapSearchFilter {
+      padding: 0 6em;
+    }
+  }
+}
+/* ----- */
+
 body {
-  background-color: var(--VeryLightGray);
+  background-color: var(--bodyBackground);
+}
+body.isDarkMode {
+  --colorBackgroundItem: hsl(209, 23%, 22%);
+  --colorText: hsl(0, 0%, 100%);
+  --colorItems: hsl(0, 0%, 100%);
+  --bodyBackground: hsl(207, 26%, 17%);
+  --colorShadow: rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease all;
 }
 
 /* ocultar scroll -y */
@@ -21,6 +54,11 @@ body {
   /*  ## Colors
 
 ### Neutral */
+  --colorBackgroundItem: hsl(0, 0%, 100%);
+  --colorText: hsl(200, 15%, 8%);
+  --colorItems: hsl(0, 0%, 52%);
+  --bodyBackground: hsl(0, 0%, 98%);
+  --colorShadow: rgba(0, 0, 0, 0.05);
   /* (DarkModeElements) */
   --DarkBlue: hsl(209, 23%, 22%);
 
@@ -38,4 +76,7 @@ body {
 
   /* (DarkModeText&LightModeElements) */
   --White: hsl(0, 0%, 100%);
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
 }

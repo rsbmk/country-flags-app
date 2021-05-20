@@ -34,11 +34,17 @@ export default function reducer(state, action) {
       return { ...state, countryListByName };
     }
     case "GET_A_COUNTRY_BY_NAME": {
+      console.log(state.countryList);
       const countryName = action.payload.toLowerCase();
       const dataCountry = state.countryList.filter(
         (country) => country.name.toLowerCase() === countryName
       );
-
+      /*  console.log(countryName);
+      if (!dataCountry.length) {
+        dataCountry = state.countryList.filter(
+          (country) => country.name.toLowerCase() === countryName
+        );
+      } */
       return { ...state, getCountryByName: dataCountry };
     }
     default: {

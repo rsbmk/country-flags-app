@@ -14,7 +14,7 @@ export default function DetailCountry({ params }) {
   const [dataCountry] = useSelector((state) => state.getCountryByName);
   return (
     <div className="wrapDetailPage">
-      <div className="container">
+      <div className="containerCountryDetail">
         <div className="wrapButtonBack">
           <button>back</button>
         </div>
