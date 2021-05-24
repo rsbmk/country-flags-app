@@ -4,6 +4,7 @@ import "./styles.css";
 import { useLocation } from "wouter";
 
 export default function Header() {
+  // eslint-disable-next-line no-unused-vars
   const [location, setLocation] = useLocation();
 
   return (

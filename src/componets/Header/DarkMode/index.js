@@ -1,7 +1,14 @@
 import React from "react";
 import "./style.css";
+
 export default function DarkMode() {
-  const handleDarkMode = (evt) => {
+  const { matches } = window.matchMedia("(prefers-color-scheme: dark)");
+
+  if (matches) {
+    document.body.classList.add("isDarkMode");
+  }
+
+  const handleDarkMode = () => {
     document.body.classList.toggle("isDarkMode");
   };
   return (

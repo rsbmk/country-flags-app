@@ -2,7 +2,8 @@
   cursor: pointer;
   font-weight: 600;
 }
-.fa-moon {
+.fa-moon,
+.fa-sun {
   transform: rotate(-30deg);
   margin-right: 10px;
 }
